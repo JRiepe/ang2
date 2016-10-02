@@ -1,10 +1,12 @@
 <div>
-    <nav class='navbar navbar-default'>
+    <nav class='navbar navbar-default' style="background-color: orange;">
         <div class='container-fluid'>
             <a class='navbar-brand'>{{pageTitle}}</a>
-            <ul class='nav navbar-nav'>
+            <ul class='nav navbar-nav' style="background-color: orange;">
                 <li><a [routerLink]="['/']">Home</a></li>
                 <li><a [routerLink]="['/account-list']">Account List</a></li>
+                <li><a [routerLink]="['/about']">About</a></li>
+                <li><a [routerLink]="['/contact']">Contact</a></li>
             </ul>
         </div>
     </nav>
