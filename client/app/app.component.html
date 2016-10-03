@@ -1,16 +1,101 @@
 <div>
-    <nav class='navbar navbar-default' style="background-color: orange;">
-        <div class='container-fluid'>
-            <a class='navbar-brand'>{{pageTitle}}</a>
-            <ul class='nav navbar-nav' style="background-color: orange;">
+    <!-- <nav class='navbar navbar-default' style="background-color: #000000;">
+        <div class='container-fluid' style='height: auto;'>
+
+            <a class='navbar-brand'><img src='/images/bikeassist.png' style='height: 75px; width: 75px;'/>{{pageTitle}}</a>
+            <ul class='nav navbar-nav' style="background-color: #000000;">
                 <li><a [routerLink]="['/']">Home</a></li>
                 <li><a [routerLink]="['/account-list']">Account List</a></li>
                 <li><a [routerLink]="['/about']">About</a></li>
                 <li><a [routerLink]="['/contact']">Contact</a></li>
             </ul>
         </div>
-    </nav>
+    </nav> -->
+    <nav class="navbar navbar-inverse navbar-static-top theBanner">
+                <div class="row" style='width: 100%;'> 
+                    <div class="col-md-2">
+                        <a class="" href='/'>
+                            <img src='/images/bikeassist.png' alt="Logo" height="75" width="75">    
+                        </a>                   
+                    </div>
+                    <div class="col-md-10 text-left theBanner">
+                        <h2>Find Bike Paths and Track your Ride</h2>
+                    </div>
+                </div>
+
+
+
+        <div class="container">
+                
+            
+                <div class="navbar-header theBanner">
+
+                    
+                    <!-- Collapsed Hamburger -->
+                    <button type="button" class="navbar-toggle collapsed theBanner" data-toggle="collapse" data-target="#app-navbar-collapse">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <!-- Branding Image -->
+                    <a class="navbar-brand theBanner" href="/images/bikeassist.png">
+                        
+                    </a>
+                </div> <!-- navbar-header -->
+
+            <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                <!-- Left Side Of Navbar -->
+                            <ul class="nav navbar-nav">
+                                <li><a [routerLink]="['/']">Home</a></li>
+                                <li><a [routerLink]="['/account-list']">Account List</a></li>
+                                <li><a [routerLink]="['/about']">About</a></li>
+                                <li><a [routerLink]="['/contact']">Contact</a></li>
+                                <!-- <li><a href="{{ url('/home') }}">Home</a></li>
+                                <li><a href="{{ url('/trail') }}">Bike Trails</a></li>
+                                <li><a href="{{ url('/ride') }}">My Rides</a></li>
+                                <li><a href="{{ url('/stats') }}">My Stats</a></li>
+                                <li><a href="{{ url('/chart') }}">My Charts</a></li>
+                                <li><a href="{{ url('/about') }}">About</a></li>
+                                <li><a href="{{ url('/contact') }}">Contact</a></li> -->
+                            </ul>
+
+                <!-- Right Side Of Navbar -->
+                            <ul class="nav navbar-nav navbar-right theBanner">
+                                <!-- Authentication Links -->
+                                <!-- @if (Auth::guest()) -->
+                                    <li><a href="/login">Login</a></li>
+                                    <li><a href="/register">Register</a></li>
+                                <!-- @else
+                                    <li class="dropdown theBanner">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                            {{ Auth::user()->name }} <span class="caret"></span>
+                                        </a>
+
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                                        </ul>
+                                    </li>
+                                @endif -->
+                            </ul>
+            </div> <!-- collapse navbar-collapse" id="app-navbar-collapse" -->
+        </div> <!-- container -->
+    </nav> <!-- End Navbar      -->
+
     <div class='container'>
         <router-outlet></router-outlet>
+    </div>
+    <div class="footer navbar-fixed-bottom">
+        <div class="container text-center">
+            <p>&copy; 2016 John Riepe</p>
+            
+                <tr>
+                    <td><a href="https://www.facebook.com/jriepe" target="_blank" alt='Facebook' data-toggle="tooltip" data-placement="top" title="Facebook"><button type='button' class='fa fa-facebook fa-2x theBanner'></button></a></td>
+                    <td><a href="https://github.com/JRiepe" target="_blank" alt='Github' data-toggle="tooltip" data-placement="top" title="Github"><button type='button' class='fa fa-github fa-2x theBanner'></button></a></td>
+                    <td><a href="https://www.linkedin.com/in/jriepe" target="_blank" alt='LinkedIn' data-toggle="tooltip" data-placement="top" title="LinkedIn"><button type='button' class='fa fa-linkedin fa-2x theBanner'></button></a></td>
+                </tr>
+           
+        </div>
     </div>
 </div>
