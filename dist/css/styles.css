@@ -5,6 +5,7 @@
             /*background-repeat: no-repeat center center-fixed;*/
             background-image:url('/images/graphy.png');
             /*position:relative;*/
+            margin: 0 auto;
         }
 
         
@@ -45,6 +46,7 @@
             background-color: #000000;
             color: skyblue;
             padding-bottom: 3px;
+
 
         }
         
