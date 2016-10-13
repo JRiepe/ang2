@@ -35350,14 +35350,14 @@
 	var forms_1 = __webpack_require__(317);
 	var app_component_1 = __webpack_require__(319);
 	var welcome_component_1 = __webpack_require__(321);
-	var account_list_component_1 = __webpack_require__(322);
+	var trails_component_1 = __webpack_require__(322);
 	var about_component_1 = __webpack_require__(324);
 	var contact_component_1 = __webpack_require__(326);
 	var core_2 = __webpack_require__(3);
 	core_2.enableProdMode();
 	var routing = router_1.RouterModule.forRoot([
 	    { path: '', component: welcome_component_1.WelcomeComponent },
-	    { path: 'account-list', component: account_list_component_1.AccountListComponent },
+	    { path: 'trails', component: trails_component_1.TrailsComponent },
 	    { path: 'about', component: about_component_1.AboutComponent },
 	    { path: 'contact', component: contact_component_1.ContactComponent }
 	]);
@@ -35373,7 +35373,7 @@
 	                forms_1.ReactiveFormsModule],
 	            declarations: [app_component_1.AppComponent,
 	                welcome_component_1.WelcomeComponent,
-	                account_list_component_1.AccountListComponent,
+	                trails_component_1.TrailsComponent,
 	                about_component_1.AboutComponent,
 	                contact_component_1.ContactComponent
 	            ],
@@ -63642,7 +63642,7 @@
 /* 320 */
 /***/ function(module, exports) {
 
-	module.exports = "<div>\n    <!-- <nav class='navbar navbar-default' style=\"background-color: #000000;\">\n        <div class='container-fluid' style='height: auto;'>\n\n            <a class='navbar-brand'><img src='/images/bikeassist.png' style='height: 75px; width: 75px;'/>{{pageTitle}}</a>\n            <ul class='nav navbar-nav' style=\"background-color: #000000;\">\n                <li><a [routerLink]=\"['/']\">Home</a></li>\n                <li><a [routerLink]=\"['/account-list']\">Account List</a></li>\n                <li><a [routerLink]=\"['/about']\">About</a></li>\n                <li><a [routerLink]=\"['/contact']\">Contact</a></li>\n            </ul>\n        </div>\n    </nav> -->\n    <nav class=\"navbar navbar-inverse navbar-static-top theBanner\">\n                <div class=\"row\" style='width: 100%;'> \n                    <div class=\"col-md-2\">\n                        <a class=\"\" href='/'>\n                            <img src='/images/bikeassist.png' alt=\"Logo\" height=\"75\" width=\"75\">    \n                        </a>                   \n                    </div>\n                    <div class=\"col-md-10 text-left theBanner\">\n                        <h2>Find Bike Paths and Track your Ride</h2>\n                    </div>\n                </div>\n\n\n\n        <div class=\"container\">\n                \n            \n                <div class=\"navbar-header theBanner\">\n\n                    \n                    <!-- Collapsed Hamburger -->\n                    <button type=\"button\" class=\"navbar-toggle collapsed theBanner\" data-toggle=\"collapse\" data-target=\"#app-navbar-collapse\">\n                        <span class=\"sr-only\">Toggle Navigation</span>\n                        <span class=\"icon-bar\"></span>\n                        <span class=\"icon-bar\"></span>\n                        <span class=\"icon-bar\"></span>\n                    </button>\n\n                    <!-- Branding Image -->\n                    <a class=\"navbar-brand theBanner\" href=\"/images/bikeassist.png\">\n                        \n                    </a>\n                </div> <!-- navbar-header -->\n\n            <div class=\"collapse navbar-collapse\" id=\"app-navbar-collapse\">\n                <!-- Left Side Of Navbar -->\n                            <ul class=\"nav navbar-nav\">\n                                <li><a [routerLink]=\"['/']\">Home</a></li>\n                                <li><a [routerLink]=\"['/account-list']\">Account List</a></li>\n                                <li><a [routerLink]=\"['/about']\">About</a></li>\n                                <li><a [routerLink]=\"['/contact']\">Contact</a></li>\n                                <!-- <li><a href=\"{{ url('/home') }}\">Home</a></li>\n                                <li><a href=\"{{ url('/trail') }}\">Bike Trails</a></li>\n                                <li><a href=\"{{ url('/ride') }}\">My Rides</a></li>\n                                <li><a href=\"{{ url('/stats') }}\">My Stats</a></li>\n                                <li><a href=\"{{ url('/chart') }}\">My Charts</a></li>\n                                <li><a href=\"{{ url('/about') }}\">About</a></li>\n                                <li><a href=\"{{ url('/contact') }}\">Contact</a></li> -->\n                            </ul>\n\n                <!-- Right Side Of Navbar -->\n                            <ul class=\"nav navbar-nav navbar-right theBanner\">\n                                <!-- Authentication Links -->\n                                <!-- @if (Auth::guest()) -->\n                                    <li><a href=\"/login\">Login</a></li>\n                                    <li><a href=\"/register\">Register</a></li>\n                                <!-- @else\n                                    <li class=\"dropdown theBanner\">\n                                        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\">\n                                            {{ Auth::user()->name }} <span class=\"caret\"></span>\n                                        </a>\n\n                                        <ul class=\"dropdown-menu\" role=\"menu\">\n                                            <li><a href=\"{{ url('/logout') }}\"><i class=\"fa fa-btn fa-sign-out\"></i>Logout</a></li>\n                                        </ul>\n                                    </li>\n                                @endif -->\n                            </ul>\n            </div> <!-- collapse navbar-collapse\" id=\"app-navbar-collapse\" -->\n        </div> <!-- container -->\n    </nav> <!-- End Navbar      -->\n\n    <div class='container'>\n        <router-outlet></router-outlet>\n    </div>\n    <div class=\"footer navbar-fixed-bottom\">\n        <div class=\"container text-center\">\n            <p>&copy; 2016 John Riepe</p>\n            \n                <p>\n                    <a href=\"https://www.facebook.com/jriepe\" target=\"_blank\" alt='Facebook' data-toggle=\"tooltip\" data-placement=\"top\" title=\"Facebook\"><button type='button' class='fa fa-facebook fa-2x theBanner align-center'></button></a>\n                    <a href=\"https://github.com/JRiepe\" target=\"_blank\" alt='Github' data-toggle=\"tooltip\" data-placement=\"top\" title=\"Github\"><button type='button' class='fa fa-github fa-2x theBanner'></button></a>\n                    <a href=\"https://www.linkedin.com/in/jriepe\" target=\"_blank\" alt='LinkedIn' data-toggle=\"tooltip\" data-placement=\"top\" title=\"LinkedIn\"><button type='button' class='fa fa-linkedin fa-2x theBanner'></button></a>\n                </p>\n           \n        </div>\n    </div>\n</div>\n"
+	module.exports = "<div>\n    <!-- <nav class='navbar navbar-default' style=\"background-color: #000000;\">\n        <div class='container-fluid' style='height: auto;'>\n\n            <a class='navbar-brand'><img src='/images/bikeassist.png' style='height: 75px; width: 75px;'/>{{pageTitle}}</a>\n            <ul class='nav navbar-nav' style=\"background-color: #000000;\">\n                <li><a [routerLink]=\"['/']\">Home</a></li>\n                <li><a [routerLink]=\"['/account-list']\">Account List</a></li>\n                <li><a [routerLink]=\"['/about']\">About</a></li>\n                <li><a [routerLink]=\"['/contact']\">Contact</a></li>\n            </ul>\n        </div>\n    </nav> -->\n    <nav class=\"navbar navbar-inverse navbar-static-top theBanner\">\n                <div class=\"row\" style='width: 100%;'> \n                    <div class=\"col-md-2\">\n                        <a class=\"\" href='/'>\n                            <img src='/images/bikeassist.png' alt=\"Logo\" height=\"75\" width=\"75\">    \n                        </a>                   \n                    </div>\n                    <div class=\"col-md-10 text-left theBanner\">\n                        <h2>Find Bike Paths and Track your Ride</h2>\n                    </div>\n                </div>\n\n\n\n        <div class=\"container\">\n                \n            \n                <div class=\"navbar-header theBanner\">\n\n                    \n                    <!-- Collapsed Hamburger -->\n                    <button type=\"button\" class=\"navbar-toggle collapsed theBanner\" data-toggle=\"collapse\" data-target=\"#app-navbar-collapse\">\n                        <span class=\"sr-only\">Toggle Navigation</span>\n                        <span class=\"icon-bar\"></span>\n                        <span class=\"icon-bar\"></span>\n                        <span class=\"icon-bar\"></span>\n                    </button>\n\n                    <!-- Branding Image -->\n                    <a class=\"navbar-brand theBanner\" href=\"/images/bikeassist.png\">\n                        \n                    </a>\n                </div> <!-- navbar-header -->\n\n            <div class=\"collapse navbar-collapse\" id=\"app-navbar-collapse\">\n                <!-- Left Side Of Navbar -->\n                            <ul class=\"nav navbar-nav\">\n                                <li><a [routerLink]=\"['/']\">Home</a></li>\n                                <li><a [routerLink]=\"['/trails']\">Bike Trails</a></li>\n                                <li><a [routerLink]=\"['/about']\">About</a></li>\n                                <li><a [routerLink]=\"['/contact']\">Contact</a></li>\n                                <!-- <li><a href=\"{{ url('/home') }}\">Home</a></li>\n                                <li><a href=\"{{ url('/trail') }}\">Bike Trails</a></li>\n                                <li><a href=\"{{ url('/ride') }}\">My Rides</a></li>\n                                <li><a href=\"{{ url('/stats') }}\">My Stats</a></li>\n                                <li><a href=\"{{ url('/chart') }}\">My Charts</a></li>\n                                <li><a href=\"{{ url('/about') }}\">About</a></li>\n                                <li><a href=\"{{ url('/contact') }}\">Contact</a></li> -->\n                            </ul>\n\n                <!-- Right Side Of Navbar -->\n                            <ul class=\"nav navbar-nav navbar-right theBanner\">\n                                <!-- Authentication Links -->\n                                <!-- @if (Auth::guest()) -->\n                                    <li><a href=\"/login\">Login</a></li>\n                                    <li><a href=\"/register\">Register</a></li>\n                                <!-- @else\n                                    <li class=\"dropdown theBanner\">\n                                        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\">\n                                            {{ Auth::user()->name }} <span class=\"caret\"></span>\n                                        </a>\n\n                                        <ul class=\"dropdown-menu\" role=\"menu\">\n                                            <li><a href=\"{{ url('/logout') }}\"><i class=\"fa fa-btn fa-sign-out\"></i>Logout</a></li>\n                                        </ul>\n                                    </li>\n                                @endif -->\n                            </ul>\n            </div> <!-- collapse navbar-collapse\" id=\"app-navbar-collapse\" -->\n        </div> <!-- container -->\n    </nav> <!-- End Navbar      -->\n\n    <div class='container'>\n        <router-outlet></router-outlet>\n    </div>\n    <div class=\"footer navbar-fixed-bottom\">\n        <div class=\"container text-center\">\n            <p>&copy; 2016 John Riepe</p>\n            \n                <p>\n                    <a href=\"https://www.facebook.com/jriepe\" target=\"_blank\" alt='Facebook' data-toggle=\"tooltip\" data-placement=\"top\" title=\"Facebook\"><button type='button' class='fa fa-facebook fa-2x theBanner align-center'></button></a>\n                    <a href=\"https://github.com/JRiepe\" target=\"_blank\" alt='Github' data-toggle=\"tooltip\" data-placement=\"top\" title=\"Github\"><button type='button' class='fa fa-github fa-2x theBanner'></button></a>\n                    <a href=\"https://www.linkedin.com/in/jriepe\" target=\"_blank\" alt='LinkedIn' data-toggle=\"tooltip\" data-placement=\"top\" title=\"LinkedIn\"><button type='button' class='fa fa-linkedin fa-2x theBanner'></button></a>\n                </p>\n           \n        </div>\n    </div>\n</div>\n"
 
 /***/ },
 /* 321 */
@@ -63689,26 +63689,26 @@
 	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
 	var core_1 = __webpack_require__(3);
-	var AccountListComponent = (function () {
-	    function AccountListComponent() {
+	var TrailsComponent = (function () {
+	    function TrailsComponent() {
 	    }
-	    AccountListComponent = __decorate([
+	    TrailsComponent = __decorate([
 	        core_1.Component({
-	            selector: 'account-list',
+	            selector: 'trails',
 	            template: __webpack_require__(323),
 	        }), 
 	        __metadata('design:paramtypes', [])
-	    ], AccountListComponent);
-	    return AccountListComponent;
+	    ], TrailsComponent);
+	    return TrailsComponent;
 	}());
-	exports.AccountListComponent = AccountListComponent;
+	exports.TrailsComponent = TrailsComponent;
 
 
 /***/ },
 /* 323 */
 /***/ function(module, exports) {
 
-	module.exports = "<h1>Account list</h1>"
+	module.exports = "<h1>Trails</h1>"
 
 /***/ },
 /* 324 */

@@ -8,7 +8,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import {AppComponent} from './app/app.component';
 import {WelcomeComponent} from './welcome/welcome.component';
-import {AccountListComponent} from './account-list/account-list.component';
+import {TrailsComponent} from './trails/trails.component';
 import {AboutComponent} from './about/about.component';
 import {ContactComponent} from './contact/contact.component';
 
@@ -17,7 +17,7 @@ enableProdMode();
 
 const routing = RouterModule.forRoot([
     { path: '',      component: WelcomeComponent },
-    { path: 'account-list', component: AccountListComponent },
+    { path: 'trails', component: TrailsComponent },
     { path: 'about', component: AboutComponent },
     { path: 'contact', component: ContactComponent }
 ]);
@@ -30,7 +30,7 @@ const routing = RouterModule.forRoot([
     		  ReactiveFormsModule],
     declarations: [AppComponent,
     			   WelcomeComponent,
-    			   AccountListComponent,
+    			   TrailsComponent,
                    AboutComponent,
                    ContactComponent
              ],
