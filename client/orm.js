@@ -1,6 +1,6 @@
 var mysql = require('mysql');
 var ormdb = require('../db/ormdb.js');
-var connection = mysql.createPool(process.env.JAWSDB_URL);
+var connection = mysql.createConnection(process.env.JAWSDB_URL);
 
 // var connection = mysql.createConnection({
 // 	host: 'localhost',

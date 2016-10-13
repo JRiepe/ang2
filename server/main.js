@@ -33,12 +33,12 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({type:'application/vnd.api+json'}));
 
 app.use(morgan('dev'));
-orm.connectToDB();
+
 app.get('/', function(req, res) {
     res.sendFile(__dirname + '/../dist/index.html');
 });
 
-
+orm.connectToDB();
 
 app.listen(app.get('port'), function() {
     console.log('Angular2 fullstack listening on port '+app.get('port'));
