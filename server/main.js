@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 var flash = require('connect-flash');
 var passport = require('passport');
 var session = require('express-session');
-var orm = require('../db/orm.js');
+//var orm = require('../db/orm.js');
 var app = express();
 
 
@@ -38,7 +38,7 @@ app.get('/', function(req, res) {
     res.sendFile(__dirname + '/../dist/index.html');
 });
 
-orm.connectToDB();
+//orm.connectToDB();
 
 app.listen(app.get('port'), function() {
     console.log('Angular2 fullstack listening on port '+app.get('port'));

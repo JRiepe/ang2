@@ -6,7 +6,7 @@
     "build": "webpack --progress",
     "build:prod": "webpack -p --progress",
     "postinstall": "typings install",
-    "start": "concurrently \"webpack --watch --colors\" \"node server/main.js\""
+    "start": "concurrently \"webpack --watch --colors\" \"nodemon server/main.js\""
   },
   "dependencies": {
     "@angular/common": "2.0.0",
@@ -33,6 +33,7 @@
     "jquery": "^2.2.4",
     "morgan": "^1.7.0",
     "mysql": "^2.11.1",
+    "nodemon": "^1.10.2",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
     "raw-loader": "0.5.1",
@@ -46,6 +47,6 @@
     "zone.js": "^0.6.23"
   },
   "engines": {
-    "node": "4.4.3"
+    "node": "6.6.0"
   }
 }
